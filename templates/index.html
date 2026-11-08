@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Price Simulation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="container">
+        <p class="eyebrow">PYTHON DATA SCIENCE PROJECT</p>
+
+        <h1>Mô phỏng biến động giá chứng khoán</h1>
+
+        <p>
+            Phân tích và trực quan hóa biến động giá cổ phiếu
+            trong 365 ngày bằng Python.
+        </p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="grid">
+
+        <div class="card video-card">
+            <h2>Video mô phỏng biến động giá</h2>
+
+            <p>
+                Quan sát sự thay đổi giá cổ phiếu qua từng ngày
+                giao dịch trong năm.
+            </p>
+
+            <video controls preload="metadata">
+                <source
+                    src="{{ url_for('static', path='video/stock_animation.mp4') }}"
+                    type="video/mp4">
+
+                Trình duyệt không hỗ trợ video HTML5.
+            </video>
+        </div>
+
+        <aside class="card">
+            <h2>Thông tin mô phỏng</h2>
+
+            <ul>
+                <li>Thời gian: 365 ngày</li>
+                <li>Số mức giá: 7 mức</li>
+                <li>Ngôn ngữ: Python</li>
+                <li>Thư viện: NumPy, Pandas, Matplotlib</li>
+            </ul>
+
+            <h3>Quy ước màu sắc</h3>
+
+            <p>🟡 Giá tham chiếu</p>
+            <p>🔵 Giá sàn</p>
+            <p>🟣 Giá trần</p>
+            <p>🔴 Giá thấp hơn tham chiếu</p>
+            <p>🟢 Giá cao hơn tham chiếu</p>
+        </aside>
+
+    </section>
+
+    <section class="card">
+        <h2>Phương pháp thực hiện</h2>
+
+        <p>
+            Dữ liệu giá cổ phiếu được xử lý bằng Pandas
+            và NumPy. Matplotlib được sử dụng để xây dựng
+            biểu đồ nến và biểu đồ đường theo thời gian.
+        </p>
+
+        <p>
+            Video được tạo bằng FuncAnimation và lưu dưới
+            định dạng MP4 trước khi tích hợp vào website.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Stock Price Simulation | Python Project</p>
+</footer>
+
+</body>
+</html>
